@@ -37,14 +37,51 @@ a.btn{
 
 #main-header{
     margin: 0;
-    padding: 1.5rem;
+    padding: 1.2rem;
     background-color: var(--theme-color);
     color: #f8f5f5;
     text-align: center;
-    text-transform: uppercase;
     font-family: 'Goldman','Courier New', Courier, monospace;
-    font-size: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+#main-header h2{
+    font-size: 1.2rem;
     font-weight: 700;
+    text-transform: uppercase;
+}
+
+#main-header input{
+    min-width: 12rem;
+    height: 2.5rem;
+    text-align: start;
+    border-radius: 2px;
+    padding: 4px;
+    border: none;
+    font-size: 1.2rem;
+}
+
+
+#main-header input:focus{
+    outline: none;
+}
+
+#main-header .btn{
+    background-color: #E76F51;
+    margin-left: 5px;
+}
+.create-task{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.create-task a{
+    text-decoration: none;
+    color: #ffffff;
+    text-transform: uppercase;
 }
 
 .date {
@@ -106,21 +143,8 @@ a.btn{
     background-color: #D62246;
 }
 
-.create-task{
-    -text-align: center;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 3rem;
-    margin-bottom: 3rem;
-}
 
-.create-task textarea{
-    min-width: 25rem;
-    max-width: 35rem;
-    max-height: 3rem;
-}
+
 
 #main-footer{
     background-color: var(--theme-color);
@@ -128,6 +152,7 @@ a.btn{
     text-align: center;
     padding: 1.5rem;
     font-size: 1rem;
+    margin-top: 5rem;
 }
 #main-footer a{
     color: #ffffff;
@@ -143,6 +168,10 @@ a.btn{
 
 
 @media(max-width:700px){
+
+    #main-header{
+        flex-direction: column;
+    }
     .container{
         width: 95%;
     }
@@ -160,5 +189,8 @@ a.btn{
     }
     .day{
         font-size: 2rem;
+    }
+    .create-task {
+        margin-top: 10px;
     }
 }
